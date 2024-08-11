@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "./Button"
+import Link from 'next/link'
 
 
 
@@ -28,10 +29,9 @@ export const Hero =()=>{
 
 
         </p>
-        < div className="flex w-full gap-3 pt-5 sm:flex-row ">
-        <Button  type = 'button' title =" download App " variant = "btn_dark_green" />
         
-        </div> 
+       
+       
 
 
         </div>
