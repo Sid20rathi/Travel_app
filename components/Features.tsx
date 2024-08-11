@@ -1,6 +1,8 @@
 import { FEATURES } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
+import { Button } from "./Button"
+import Link from 'next/link'
 
 const Features = () => {
   return (
@@ -39,6 +41,12 @@ const Features = () => {
           </ul>
         </div>
       </div>
+      < div className="flex justify-center pt-8 size-10 w-full h-full">
+        <Link href="/Trips">
+        <Button  type = 'button' title =" Plan your trip " variant = "btn_dark_green" /></Link>
+       
+        
+        </div> 
     </section>
   )
 }
@@ -61,6 +69,7 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
       <p className="regular-16 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none">
         {description}
       </p>
+      
     </li>
   )
 }
