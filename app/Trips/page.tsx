@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/Button"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,22 +11,22 @@ export default function Trip (){
         <div className = "flexCenter h-screen w-full bg-[url('/pattern.png')] ">
             
             <div className = " border-zinc-800  bg-white border-2 h-5/6 w-5/6 drop-shadow-5xl flex flex-row flexCenter rounded-2xl" >
-            <div className = " h-full w-full flexCenter  ">
-                <div className =" flex flex-col  ">
+            <div className = " h-full w-full pt-24 overflow-hidden ">
+                <div className =" flex flex-col sm:pl-10  ">
                
-                    <div className ="font-bold text-3xl  animate-bounce py-5 pl-4">
+                    <div className ="font-bold text-3xl text-center animate-bounce py-5 pl-4 sm:flex sm:justify-center ">
                       LET'S PLAN A TRIP TOGETHER
                     </div>
-                    <div className = "m-3  ">
+                    <div className = "m-3 pr-2 ">
                         <Inputs title = "Your Name"/>
                     </div>
-                    <div className = "m-3  ">
+                    <div className = "m-3 pr-2 ">
                         <Inputs title = "Your Email"/>
                     </div>
-                    <div className = "m-3  ">
+                    <div className = "m-3 pr-2 ">
                         <Inputs title = "Your Number"/>
                     </div>
-                    <div className = "flex flex-row pl-4 pr-4">
+                    <div className = "flex flex-row pl-5 ">
                         <div className="p-2">
                             <Inputs title = "Destination"/>
                         </div>
@@ -36,19 +37,20 @@ export default function Trip (){
                     </div>
                     <div className="flex justify-center pt-8">
                         <Link href="/">
-                        <Button title ="plan my trip" type  = 'button' variant = "btn_dark_green"  />
+                        <Button title ="plan my trip" type  = 'button' variant = "btn_dark_green"  onfun={Alerthu} />
                        
                         </Link>
+                        
                        
 
-                    </div>
+                    </div>  
 
                 </div>
                
 
             </div>
-            <div className= " hidden lg:block bg-blue-400 h-full w-full rounded-r-2xl">
-                < img src = "/rename.jpg" alt ="page" className="object-cover h-full rounded-r-2xl"/>
+            <div className= " hidden lg:block bg-blue-400 h-full w-full rounded-r-3xl">
+                < img src = "/rename.jpg" alt ="page" className="object-cover h-full rounded-r-xl"/>
             
 
             </div>
@@ -82,5 +84,5 @@ const Inputs =({title}:Inputspro)=>{
 }
 
 function Alerthu(){
-    alert("You will be contacted soon .")
+    alert("You will be contacted soon by our team.")
 }
